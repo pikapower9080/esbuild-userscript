@@ -1,0 +1,16 @@
+{
+  "name": "my-userscript",
+  "version": "1.0.0",
+  "author": "you",
+  "devDependencies": {
+    "@types/greasemonkey": "^4.0.7",
+    "esbuild": "^0.24.0",
+    "recursive-watch": "^1.1.4"
+  },
+  "description": "Try to take over the world!",
+  "scripts": {
+    "build": "bun build.js",
+    "dev": "NODE_ENV=development bun build.js"
+  },
+  "type": "module"
+}

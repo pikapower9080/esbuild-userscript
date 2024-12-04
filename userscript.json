@@ -1,0 +1,12 @@
+{
+    "name": "My Userscript",
+    "namespace": "http://tampermonkey.net/",
+    "version": "1.0.0",
+    "author": "you",
+    "match": [
+        "https://example.com/page1",
+        "https://example.com/page2"
+    ],
+    "icon": "https://example.com/icon.png",
+    "grant": "none"
+}
