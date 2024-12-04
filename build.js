@@ -34,7 +34,15 @@ function generateBanner() {
             console.warn(`Invalid value for key ${key}`)
         }
     }
-    banner += `\n// ==/UserScript==\n`
+    banner += `\n// ==/UserScript==\n\n`
+
+    if (fs.existsSync("src/styles.css")) {
+        const css = btoa(fs.readFileSync("src/styles.css", "utf-8"))
+        banner += `const injectedStyles=document.createElement("style");`
+        banner += `injectedStyles.innerHTML=atob("${css}");`
+        banner += `document.head.appendChild(injectedStyles);\n`
+    }
+
     return banner
 }
 
